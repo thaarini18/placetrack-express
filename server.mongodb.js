@@ -7,7 +7,7 @@ const app = express();
 const port = 3500;
 let db;
 
-const mongoURL = 'mongodb+srv://placetrackuser:placetrack2025@placetrack.qxoguxr.mongodb.net'
+const mongoURL = process.env.MONGO_URL || 'mongodb+srv://placetrackuser:placetrack2025@placetrack.qxoguxr.mongodb.net';
 const dbName = 'placetrack';
 
 MongoClient.connect(mongoURL)
